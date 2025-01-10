@@ -10,8 +10,10 @@ const HomePage = () => {
     <>
       <Intro />
       <section className={styles.homePageContent}>  {/* Using styles from the CSS module */}
-        <h1>Unima Dating Hub</h1>
-        <p>Click below to download the APK file:</p>
+
+        <p style={{
+          padding:"20px",
+        }}>Click below to download the APK file:</p>
         
         {/* Use the DownloadButton component */}
         <DownloadButton />

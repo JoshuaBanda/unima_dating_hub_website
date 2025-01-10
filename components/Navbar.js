@@ -144,8 +144,8 @@ function Navbar() {
       <div style={headingContainerStyles}>
         <div>
           <motion.div
-            initial={{ x: 0 }}
-            animate={{ x: -60 }}
+            initial={{ x: -100 }}
+            animate={{ x: -30 }}
             transition={{ type: 'spring', stiffness: 70, duration: 1, repeat: 2, repeatType: 'reverse' }}
           >
             <AnimatedWord iconsize={`20px`} fsize={`22px`} key={headerAnimationKey} />
