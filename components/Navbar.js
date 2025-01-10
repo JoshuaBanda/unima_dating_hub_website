@@ -148,7 +148,7 @@ function Navbar() {
             animate={{ x: -60 }}
             transition={{ type: 'spring', stiffness: 70, duration: 1, repeat: 2, repeatType: 'reverse' }}
           >
-            <AnimatedWord iconsize={`30px`} fsize={`35px`} key={headerAnimationKey} />
+            <AnimatedWord iconsize={`20px`} fsize={`22px`} key={headerAnimationKey} />
           </motion.div>
         </div>
       </div>
