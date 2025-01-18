@@ -64,7 +64,6 @@ function AnimatedWord({ iconsize, fsize }) {
           repeatType: 'reverse',
         }}
       >
-        <FontAwesomeIcon icon={faHeart} style={{ fontSize: iconsize }} color="red" />
       </motion.span>
       {Array.from('Unima Dating hub').map((letter, index) => (
         <motion.span
@@ -185,7 +184,7 @@ function Navbar() {
             {/* Sidebar Links */}
             <motion.div variants={linkVariants} custom={0} style={{ marginTop: '20px' }}>
               <Link
-                href="/"
+                href="/HomeComing"
                 style={{ ...sidebarLinkStyles, display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}
                 onClick={() => {
                   handleHomeClick();

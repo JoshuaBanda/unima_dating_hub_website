@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar'; // Adjust path if necessary
 import '../styles/globals.css'; // Import your global styles
-
+import Footer from '../components/Footer';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
 
     {/* Render the page component */}
     <Component {...pageProps} />
+    {!isLandingPage &&<Footer/>}
     </>
   );
 }

@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const images = [
     { src: '/couple.jpg', alt: 'Elegant background' },
-    { src: '/1.jpg', alt: 'Another elegant background' },
-    { src: '/4.jpg', alt: 'Yet another beautiful view' },
+    { src: '/love1.jpg', alt: 'Another elegant background' },
+    { src: '/love2.jpg', alt: 'Yet another beautiful view' },
 ];
 
 const Intro = () => {

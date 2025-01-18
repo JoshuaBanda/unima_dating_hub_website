@@ -19,40 +19,84 @@ const Landing = () => {
             {/* Welcome text */}
             <div style={{
                 position: 'fixed',
-                top: '50%',
-                left: '50%',
+                top: '30%',
+                left: '40%',
                 transform: 'translate(-50%, -50%)',
                 fontSize: '3rem', // Adjust font size as needed
                 color: 'white',
                 fontWeight: 'bold',
                 zIndex: 20, // Ensures the text appears above the overlay
             }}>
-                Welcome
+                Welcome To Unima Dating Hub
             </div>
 
             {/* Link with adjusted styling */}
-            <Link 
+            <Link
                 href="/HomeComing" // Path to navigate to
                 style={{
                     position: 'absolute',
-                    top: '60%', // Adjust the position to be below the welcome text
+                    top: '90%', // Adjust the position to be below the welcome text
                     left: '50%',
                     transform: 'translateX(-50%)', // Center the link horizontally
-                    height: '30px',
-                    width: '100px', // Adjust width for the link
+                    height: '40px',
+                    width: '300px', // Adjust width for the link
                     textAlign: 'center',
                     color: 'white',
-                    backgroundColor: 'red',
+                    backgroundColor: '',
                     lineHeight: '30px', // Vertically center the text
-                    borderRadius: '5px', // Optional: adds rounded corners
+                    borderRadius: '25px', // Optional: adds rounded corners
                     cursor: 'pointer', // Change cursor to pointer to show it’s clickable
                     zIndex: 20, // Ensure it appears above the overlay and below the welcome text
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center', // Center the text inside the link
+                    justifyContent: 'center',
                 }}
             >
-                Go Home
+
+            {/* Link with moving yellow border */}
+      <motion.div
+        style={{
+          left: '50%',
+          transform: 'translateX(-50%)', // Center the link horizontally
+          height: '40px',
+          width: '300px', // Adjust width for the link
+          textAlign: 'center',
+          color: 'white',
+          lineHeight: '30px', // Vertically center the text
+          borderRadius: '25px', // Optional: adds rounded corners
+          cursor: 'pointer', // Change cursor to pointer to show it’s clickable
+          zIndex: 20, // Ensure it appears above the overlay and below the welcome text
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center', // Center the text inside the link
+          border: '3px solid transparent', // Set an initial transparent border
+          fontSize: '22px',
+          position: 'relative', // Ensure correct positioning for the animation
+          overflow: 'hidden', // Ensures border does not exceed the element’s boundary
+          animation: 'borderAnimation 2s linear infinite', // Apply the animation
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        Continue
+
+        <style jsx>{`
+          @keyframes borderAnimation {
+            0% {
+              border-color: transparent;
+            }
+            50% {
+              border-color: white;
+              border-width: 3px;
+            }
+            100% {
+              border-color: transparent;
+            }
+          }
+        `}</style>
+      </motion.div>
+
             </Link>
 
             {/* Main container with flex layout */}
@@ -62,7 +106,7 @@ const Landing = () => {
             >
                 {/* Left side container */}
                 <motion.div style={{
-                    margin: '5px',
+                    margin: '2px',
                     height: '150px',
                     width: '50%',
                     borderRadius: '10px',
@@ -76,7 +120,7 @@ const Landing = () => {
                 >
                     {/* Inner container with background */}
                     <div style={{
-                        margin: '5px',
+                        margin: '2px',
                         height: '145px',
                         width: '98%',
                         backgroundColor: 'grey',
@@ -85,7 +129,7 @@ const Landing = () => {
                         overflow:'hidden'
                     }}>
                         <Image
-                            src='/images/image1.jpg'
+                            src='/love1.jpg'
                             alt='image1'
                             layout="fill"
                             objectFit="cover"
@@ -96,7 +140,7 @@ const Landing = () => {
 
                     {/* Inner container with background */}
                     <div style={{
-                        margin: '5px',
+                        margin: '2px',
                         height: '145px',
                         width: '98%',
                         backgroundColor: '',
@@ -146,7 +190,7 @@ const Landing = () => {
 
                 {/* Right side container */}
                 <motion.div style={{
-                    margin: '5px',
+                    margin: '2px',
                     height: '300px',
                     width: '50%',
                     backgroundColor: 'grey',
@@ -178,8 +222,8 @@ const Landing = () => {
             >
                 {/* Left side container */}
                 <motion.div style={{
-                    margin: '5px',
-                    height: '300px',
+                    margin: '2px',
+                    height: '350px',
                     width: '50%',
                     backgroundColor: 'grey',
                     borderRadius: '10px',
@@ -204,8 +248,8 @@ const Landing = () => {
 
                 {/* Right side container with nested divs */}
                 <motion.div style={{
-                    margin: '5px',
-                    height: '300px',
+                    margin: '2px',
+                    height: '350px',
                     width: '50%',
                     borderRadius: '10px',
                     position: 'relative', // Position relative for layout="fill" to work
@@ -218,8 +262,8 @@ const Landing = () => {
                 >
                     {/* Inner container with background */}
                     <div style={{
-                        margin: '5px',
-                        height: '145px',
+                        margin: '2px',
+                        height: '195px',
                         width: '98%',
                         backgroundColor: 'grey',
                         borderRadius: '10px',
@@ -238,7 +282,7 @@ const Landing = () => {
 
                     {/* Inner container with background */}
                     <div style={{
-                        margin: '5px',
+                        margin: '2px',
                         height: '145px',
                         width: '98%',
                         backgroundColor: 'grey',
@@ -247,7 +291,7 @@ const Landing = () => {
                         overflow:'hidden'
                     }}>
                         <Image
-                            src='/images/image1.jpg'
+                            src='/love1.jpg'
                             alt='image1'
                             layout="fill"
                             objectFit="cover"

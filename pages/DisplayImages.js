@@ -6,13 +6,13 @@ const DisplayImages = ({ transitionTime = 9000 }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     // Array of images
-    const images = ['/2.jpg', '/1.jpg','/3.jpg','/4.jpg' ];
+    const images = ['/love2.jpg', '/love1.jpg','/love3.jpg','/love5.jpg' ];
 
     const texts = [
-        ["Illuminate Your", "Glow"],
-        ["Unleash Inner", "Beauty"],
-        ["Elevate Your", "Elegance"],
-        ["Enjoy our", "Remote Delivery"],
+        ["Mtudu Wa", "Unima Uzakwatilana Wokha Wokha"],
+        ["Get Love", "Find A Partener"],
+        ["Musachoke 4-0", "Ma Finali"],
+        ["Zikakuvutani Apa", "Nde Basitu"],
     ];
 
     useEffect(() => {

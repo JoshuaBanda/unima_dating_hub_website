@@ -7,6 +7,9 @@ const LayOut = ({children}) => {
         <>
         <Navbar/>
         {children}
+
+
+        hi
         <Footer/>
         </>
     );
