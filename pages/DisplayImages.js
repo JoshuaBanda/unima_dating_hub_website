@@ -15,22 +15,26 @@ const DisplayImages = ({ transitionTime = 9000 }) => {
         ["Zikakuvutani Apa", "Nde Basitu"],
     ];
 
+    // Updating the image index at regular intervals
     useEffect(() => {
         const timer = setTimeout(() => {
             setCurrentImageIndex((prev) => (prev + 1) % texts.length);
         }, transitionTime);
 
-        return () => clearTimeout(timer);
-    }, [currentImageIndex, transitionTime]);
+        return () => clearTimeout(timer); // Clean up on unmount
+    }, [transitionTime, texts.length]); // Add texts.length as a dependency
 
+    // Image loading callback
     const handleImageLoad = () => {
         setIsLoading(false);
     };
 
+    // Stop auto-transition on touch start
     const handleTouchStart = () => {
         clearTimeout(); // Stop the automatic transition
     };
 
+    // Resume auto-transition after touch end
     const handleTouchEnd = () => {
         setTimeout(() => {
             setCurrentImageIndex((prev) => (prev + 1) % texts.length);
@@ -132,6 +136,6 @@ const DisplayImages = ({ transitionTime = 9000 }) => {
             </div>
         </div>
     );
-}
+};
 
 export default DisplayImages;

@@ -1,17 +1,16 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { FaBars, FaHome, } from 'react-icons/fa';
+import { FaBars, FaHome } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import {  } from 'react-icons/fa6';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSeedling,love } from '@fortawesome/free-solid-svg-icons/faSeedling';
+import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Policy from '../pages/Policy';
 
 // Animation variants for the sidebar links
 const linkVariants = {
-  initial: { opacity: 0, x: -100 }, // Adjusted for left-side movement
+  initial: { opacity: 0, x: -100 },
   animate: (i) => ({
     opacity: 1,
     x: 0,
@@ -52,19 +51,6 @@ function AnimatedWord({ iconsize, fsize }) {
 
   return (
     <motion.h1 variants={letterVariants} initial="initial" animate="animate">
-      <motion.span
-        animate={{
-          scale: [1, 1.2],
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 70,
-          duration: 1,
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
-      >
-      </motion.span>
       {Array.from('Unima Dating hub').map((letter, index) => (
         <motion.span
           key={index}
@@ -89,12 +75,12 @@ function AnimatedWord({ iconsize, fsize }) {
 function Navbar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [headerAnimationKey, setHeaderAnimationKey] = useState(0); // Key for header animation
-  const [sidebarAnimationKey, setSidebarAnimationKey] = useState(0); // Key for sidebar animation
+  const [headerAnimationKey, setHeaderAnimationKey] = useState(0); 
+  const [sidebarAnimationKey, setSidebarAnimationKey] = useState(0); 
 
   const toggleSidebar = useCallback(() => {
     setIsOpen((prev) => {
-      if (!prev) setSidebarAnimationKey((prevKey) => prevKey + 1); // Update key when opening
+      if (!prev) setSidebarAnimationKey((prevKey) => prevKey + 1);
       return !prev;
     });
   }, []);
@@ -104,7 +90,7 @@ function Navbar() {
   }, []);
 
   const handleHomeClick = useCallback(() => {
-    setHeaderAnimationKey((prevKey) => prevKey + 1); // Update key for header animation
+    setHeaderAnimationKey((prevKey) => prevKey + 1); 
   }, []);
 
   const checkScreenSize = useCallback(() => {
@@ -116,7 +102,6 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener('resize', checkScreenSize);
 
-    // Event listener to close the sidebar if clicked outside
     const handleClickOutside = (event) => {
       const sidebar = document.getElementById('sidebar');
       const menuButton = document.getElementById('menuButton');
@@ -141,15 +126,13 @@ function Navbar() {
       </button>
 
       <div style={headingContainerStyles}>
-        <div>
-          <motion.div
-            initial={{ x: -100 }}
-            animate={{ x: -30 }}
-            transition={{ type: 'spring', stiffness: 70, duration: 1, repeat: 2, repeatType: 'reverse' }}
-          >
-            <AnimatedWord iconsize={`20px`} fsize={`22px`} key={headerAnimationKey} />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ x: -100 }}
+          animate={{ x: -30 }}
+          transition={{ type: 'spring', stiffness: 70, duration: 1, repeat: 2, repeatType: 'reverse' }}
+        >
+          <AnimatedWord iconsize={`20px`} fsize={`22px`} key={headerAnimationKey} />
+        </motion.div>
       </div>
 
       <div style={iconContainerStyles}>
@@ -159,7 +142,6 @@ function Navbar() {
           id="sidebar"
           style={{ ...sidebarStyles, display: isOpen ? 'block' : 'none' }}
           role="navigation"
-          aria-expanded={isOpen}
         >
           <motion.div initial="initial" animate={isOpen ? 'animate' : 'initial'}>
             <span
@@ -195,8 +177,6 @@ function Navbar() {
                 <FaHome style={{ fontSize: '25px', marginLeft: 'auto' }} />
               </Link>
             </motion.div>
-
-
 
             <motion.div variants={linkVariants} custom={3}>
               <Link
@@ -276,7 +256,6 @@ const sidebarStyles = {
   width: '250px',
   backgroundColor: 'rgba(255, 255, 255, 0.3)', 
   boxShadow: '0 -4px 10px rgba(0, 0, 0, 0.8)', 
-  boxShadow:'inset -2px 0px 3px 0px rgba(0,0,0,0.3),inset -4px 0px 5px 0px rgba(255,255,255,0.5)',
   padding: '20px',
   zIndex: 1000,
   backdropFilter: 'blur(10px)', 
