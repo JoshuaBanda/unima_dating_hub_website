@@ -76,8 +76,8 @@ const Landing = () => {
           animation: 'borderAnimation 2s linear infinite', // Apply the animation
         }}
         initial={{ opacity: 0.5 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        animate={{ opacity: 1, }}
+        transition={{ delay: 2 }}
       >
         Continue
 
@@ -223,7 +223,7 @@ const Landing = () => {
                 {/* Left side container */}
                 <motion.div style={{
                     margin: '2px',
-                    height: '350px',
+                    height: '400px',
                     width: '50%',
                     backgroundColor: 'grey',
                     borderRadius: '10px',
@@ -249,7 +249,7 @@ const Landing = () => {
                 {/* Right side container with nested divs */}
                 <motion.div style={{
                     margin: '2px',
-                    height: '350px',
+                    height: '400px',
                     width: '50%',
                     borderRadius: '10px',
                     position: 'relative', // Position relative for layout="fill" to work
@@ -263,7 +263,7 @@ const Landing = () => {
                     {/* Inner container with background */}
                     <div style={{
                         margin: '2px',
-                        height: '195px',
+                        height: '150px',
                         width: '98%',
                         backgroundColor: 'grey',
                         borderRadius: '10px',
@@ -291,7 +291,25 @@ const Landing = () => {
                         overflow:'hidden'
                     }}>
                         <Image
-                            src='/love1.jpg'
+                            src='/love3.jpg'
+                            alt='image1'
+                            layout="fill"
+                            objectFit="cover"
+                            quality={80}
+                            priority
+                        />
+                    </div>{/* Inner container with background */}
+                    <div style={{
+                        margin: '2px',
+                        height: '95px',
+                        width: '98%',
+                        backgroundColor: 'grey',
+                        borderRadius: '10px',
+                        position: 'relative', // Position relative for layout="fill" to work
+                        overflow:'hidden'
+                    }}>
+                        <Image
+                            src='/love2.jpg'
                             alt='image1'
                             layout="fill"
                             objectFit="cover"
