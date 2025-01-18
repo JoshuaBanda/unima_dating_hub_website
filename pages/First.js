@@ -12,7 +12,7 @@ const Landing = () => {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.5)', // Black background with 50% opacity
+                backgroundColor: 'rgba(0, 0, 0, 0.6)', // Black background with 50% opacity
                 zIndex: 10, // Ensures it is above other content
             }}></div>
 
@@ -75,7 +75,7 @@ const Landing = () => {
           overflow: 'hidden', // Ensures border does not exceed the element’s boundary
           animation: 'borderAnimation 2s linear infinite', // Apply the animation
         }}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
@@ -112,8 +112,8 @@ const Landing = () => {
                     borderRadius: '10px',
                     position: 'relative', // Ensure the container has relative positioning
                 }}
-                    initial={{ y: 700 }}
-                    animate={{ y: 0 }}
+                    initial={{ x: -700 }}
+                    animate={{ x: 0 }}
                     transition={{
                         type: 'spring', stiffness: 40, duration: 50, repeat: 2, repeatType: 'reverse',
                     }}
@@ -198,7 +198,7 @@ const Landing = () => {
                     position: 'relative', // Position relative for layout="fill" to work
                     overflow:'hidden'
                 }}
-                    initial={{ y: 700 }}
+                    initial={{ y: -700 }}
                     animate={{ y: 0 }}
                     transition={{
                         type: 'spring', stiffness: 40, duration: 50, repeat: 2, repeatType: 'reverse',
@@ -233,7 +233,7 @@ const Landing = () => {
                     initial={{ y: 700 }}
                     animate={{ y: 0 }}
                     transition={{
-                        type: 'spring', stiffness: 40, duration: 50, repeat: 2, repeatType: 'reverse',
+                        type: 'spring', stiffness: 70, duration: 50, repeat: 2, repeatType: 'reverse',
                     }}
                 >
                     <Image
@@ -254,10 +254,10 @@ const Landing = () => {
                     borderRadius: '10px',
                     position: 'relative', // Position relative for layout="fill" to work
                 }}
-                    initial={{ y: 700 }}
-                    animate={{ y: 0 }}
+                    initial={{ x: 700 }}
+                    animate={{ x: 0 }}
                     transition={{
-                        type: 'spring', stiffness: 40, duration: 50, repeat: 2, repeatType: 'reverse',
+                        type: 'spring', stiffness: 30, duration: 70, repeat: 2, repeatType: 'reverse',
                     }}
                 >
                     {/* Inner container with background */}
