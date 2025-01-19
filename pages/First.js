@@ -27,7 +27,7 @@ const Landing = () => {
                 fontWeight: 'bold',
                 zIndex: 20, // Ensures the text appears above the overlay
             }}>
-                Welcome To Unima Dating Hub
+                Welcome To Uni Dating Hub
             </div>
 
             {/* Link with adjusted styling */}

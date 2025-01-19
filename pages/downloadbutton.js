@@ -7,8 +7,8 @@ const DownloadButton = () => {
   return (
     <div className={styles.container}>
       <a
-        href="/downloads/UnimaDatingHub.apk" // Correct path to the APK file inside the public folder
-        download="UnimaDatingHub.apk"
+        href="/downloads/UniDatingHub.apk" // Correct path to the APK file inside the public folder
+        download="UniDatingHub.apk"
         className={styles.button}
       >
         Download
