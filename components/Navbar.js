@@ -51,7 +51,7 @@ function AnimatedWord({ iconsize, fsize }) {
 
   return (
     <motion.h1 variants={letterVariants} initial="initial" animate="animate">
-      {Array.from('Unima Dating hub').map((letter, index) => (
+      {Array.from('Uni Dating hub').map((letter, index) => (
         <motion.span
           key={index}
           variants={letterChildVariants}
